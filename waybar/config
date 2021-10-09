@@ -1,0 +1,155 @@
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 23,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "network",
+        "memory",
+        "cpu",
+        "backlight", "pulseaudio",
+        "custom/keyboard-layout",
+        "battery",
+        "clock",
+        "tray",
+	
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": true,
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "disk": {
+    	"interval": 60,
+    	"format": " {used}",
+    	"tooltip": true,
+	    "path": "/"
+    },
+
+"clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "<span foreground='#928374'></span> {:%a, %d %b  <span foreground='#928374'></span> %H:%M}"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": " {} %",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%) ( {bandwidthDownBits} | {bandwidthUpBits} )", // Icon: wifi
+        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 100
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": false,
+        "format": "{name}",
+        "format-icons": {
+            "2:mail": "", // Icon: mail
+            "3:editor": "", // Icon: code
+            "4:terminals": "", // Icon: terminal
+            "5:portal": "", // Icon: terminal
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "backlight" : {
+    	"interval": 5,
+    	"device": "intel_backlight",
+	    "format": " {percent}%",
+	    "scroll-step":1,
+    	// "format-icons": [" ", " "]
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1,
+        // "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%  {format_source}",
+        "format-bluetooth": "{volume}%",
+        "format-muted": "MUTE",
+        "format-source": " {volume}%",
+		"format-source-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable":"",
+            "car": "",
+            "default": ["", "", ""]
+
+        },
+        "on-click": "pavucontrol"
+    },
+
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+
+    "custom/code": {
+        "format": "VSCode",
+        "on-click": "code"
+    },
+    "custom/files": {
+      "format": "Files",
+      "on-click": "pcmanfm",
+    },
+} 

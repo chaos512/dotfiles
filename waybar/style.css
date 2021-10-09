@@ -1,0 +1,125 @@
+/* Dracula Colors */
+/*-------------------------------
+@define-color background #282a36;
+@define-color highlight  #44475a;
+@define-color foreground #f8f8f2;
+@define-color comment    #6272a4;
+@define-color cyan       #8be9fd;
+@define-color green      #50fa7b;
+@define-color orange     #ffb86c;
+@define-color pink       #ff79c6;
+@define-color purple     #bd93f9;
+@define-color red        #ff5555;
+@define-color yellow     #f1fa8c;
+-------------------------------*/
+
+/* Tokyo Night Storm */
+@define-color background #000000;
+@define-color highlight  #414868;
+@define-color foreground #000000;
+@define-color comment    #565f89;
+@define-color cyan       #7dcfff;
+@define-color green      #73daca;
+@define-color orange     #ff9e64;
+@define-color pink       #bb9af7;
+@define-color blue       #7aa2f7;
+@define-color red        #f7768e;
+@define-color yellow     #e0af68;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Jetbrains Mono Bold";
+ font-weight : 500;
+  font-size: 13px;
+  min-height: 16px;
+  transition: none;
+}
+
+
+@keyframes blink {
+  to {
+    background-color: @foreground;
+    color: @foreground;
+  }
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
+  margin: 0 13px;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.good {
+  color: @green;
+}
+
+#battery.warning {
+  color: @orange;
+}
+
+#battery.critical {
+  color: @pink;
+}
+
+#battery.warning:not(.charging), #battery.critical:not(.charging) {
+  padding: 0 10px;
+  border-bottom: 3px solid @highlight; /* Same as window#waybar for consistency */
+  background: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#backlight {
+  color: @green;
+}
+
+#clock {
+  color: @green;
+}
+
+#cpu {
+  color: @green;
+}
+
+#memory {
+  color: @green;
+}
+
+#network {
+  color: @green;
+}
+
+#pulseaudio {
+  color: @green;
+}
+
+#temperature {
+  color: @orange;
+}
+
+#temperature.critical {
+  color: @red;
+}
+#workspaces button.visible {
+  background: @bg-dim;
+  color: @text-bright;
+}
+#workspaces button.focused {
+  font-weight: bold;
+  color: @green;
+  text-shadow: 0px 0px 0 black;
+}
+#workspaces button {
+	font-weight: 100
+}
+
