@@ -1,0 +1,117 @@
+{
+  "segments": [
+    {
+      "segment_id": "036e1512-0244-4ad9-91c1-992d921ede8a",
+      "max_doc": 289,
+      "deletes": null
+    },
+    {
+      "segment_id": "284e2fb5-eb77-489e-87cb-07f0d27f5d10",
+      "max_doc": 6,
+      "deletes": null
+    },
+    {
+      "segment_id": "0f5b1b71-d394-408e-93d8-6c12b179a756",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
+      "segment_id": "27572152-f504-4f98-b6d8-9f25ee11907c",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
+      "segment_id": "9190d007-5828-4460-b244-f58ff1166282",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
+      "segment_id": "df526d04-f326-43a8-8238-3d955b1abba7",
+      "max_doc": 1,
+      "deletes": null
+    },
+    {
+      "segment_id": "ebd78009-3579-48c2-9b83-490f0ac9f403",
+      "max_doc": 1,
+      "deletes": null
+    }
+  ],
+  "schema": [
+    {
+      "name": "body",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "default"
+        },
+        "stored": false
+      }
+    },
+    {
+      "name": "topic",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "default"
+        },
+        "stored": false
+      }
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "default"
+        },
+        "stored": false
+      }
+    },
+    {
+      "name": "date",
+      "type": "u64",
+      "options": {
+        "indexed": false,
+        "fast": "single",
+        "stored": false
+      }
+    },
+    {
+      "name": "sender",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "basic",
+          "tokenizer": "raw"
+        },
+        "stored": false
+      }
+    },
+    {
+      "name": "room_id",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "basic",
+          "tokenizer": "raw"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "event_id",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "basic",
+          "tokenizer": "raw"
+        },
+        "stored": true
+      }
+    }
+  ],
+  "opstamp": 793
+}
