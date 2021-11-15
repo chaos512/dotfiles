@@ -1,0 +1,45 @@
+window {
+    margin: 5px;
+    border: 2px solid #000000;
+    background-color: #000000;
+    border-radius: 15px;
+    font-family: hack;
+}
+
+#input {
+    margin: 5px;
+    border: 2px solid #000000;
+    background-color: #000000;
+}
+
+#inner-box {
+    margin: 5px;
+    border: 2px solid #000000;
+    background-color: #000000;
+}
+
+#outer-box {
+    margin: 5px;
+    border: 2px solid #000000;
+    background-color: #000000;
+}
+
+#scroll {
+    margin: 5px;
+    border: 2px solid #000000;
+    background-color: #000000;
+}
+
+#text {
+    margin: 5px;
+}
+
+#entry:selected {
+    background-color: #00FF00;
+}
+
+#entry:selected label, #entry:selected image {
+    color: black;
+    background-color: #00FF00;
+    border: 0px;
+}

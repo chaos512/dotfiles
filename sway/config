@@ -36,6 +36,7 @@ seat * hide_cursor 2000
 #
 # Example configuration:
 #
+exec gentoo-pipewire-launcher
 exec swayidle -w \
           timeout 7200 'swaylock -f' \
           timeout 7210 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
@@ -160,10 +161,10 @@ default_border pixel 2
 hide_edge_borders --i3 smart_no_gaps
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
-client.focused          #00ff80 #434c5e #eceff4 #00ff80   #00ff80
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+client.focused          #00FF00 #000000 #FFFFFF #00FF00   #00FF00
+client.focused_inactive #00FF00 #000000 #FFFFFF #00FF00   #00FF00
+client.unfocused        #00FF00 #000000 #FFFFFF #00FF00   #000000
+client.urgent           #FFFFFF #FFFFFF #000000 #00FF00   #FFFFFF
 #
 # Layout stuff:
 #
@@ -175,8 +176,8 @@ client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+t layout tabbed
+    bindsym $mod+w layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen

@@ -3,5 +3,5 @@ insensitive=true
 no_actions=true
 normal_window=true
 show=drun
-stylesheet=gruvbox
+stylesheet=main
 # matching=fuzzy
