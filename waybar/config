@@ -8,22 +8,24 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 23,
+    "height": 22,
 
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
     ],
     "modules-center": [
-    ],
+    "sway/window"
+ ],
     "modules-right": [
         "network",
         "memory",
         "cpu",
+	"disk",
         "backlight", "pulseaudio",
-        "custom/keyboard-layout",
         "battery",
-        "clock",
+        "sway/language",
+	"clock",
         "tray",
 	
     ],
@@ -90,23 +92,34 @@
     },
 
     "sway/window": {
-        "format": "{}",
-        "max-length": 100
+        "format": " %{}% ",
+	"max-length": 70,
     },
 
     "sway/workspaces": {
-        "all-outputs": false,
+        "all-outputs": true,
         "disable-scroll": false,
-        "format": "{name}",
+	"current-only": false,
+        "format": "{name}$ {icon}",
         "format-icons": {
-            "2:mail": "", // Icon: mail
-            "3:editor": "", // Icon: code
-            "4:terminals": "", // Icon: terminal
-            "5:portal": "", // Icon: terminal
-            "urgent": "",
-            "focused": "",
-            "default": ""
+	     "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+	     "6": "",
+	     "7": "",
+	     "8": "",
+	     "9": "",
+	     "10": "🎵",
+	     "urgent": "",
+             "focused": "",
+             "default": ""
         }
+    },
+ 
+    "sway/language": {
+        "format": " {short}",
     },
 
     "backlight" : {
@@ -141,15 +154,7 @@
 
     "tray": {
         "icon-size": 20,
-        "spacing": 10
+        "spacing": 7
     },
 
-    "custom/code": {
-        "format": "VSCode",
-        "on-click": "code"
-    },
-    "custom/files": {
-      "format": "Files",
-      "on-click": "pcmanfm",
-    },
 } 

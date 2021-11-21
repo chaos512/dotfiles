@@ -1,36 +1,20 @@
-/* Dracula Colors */
-/*-------------------------------
-@define-color background #282a36;
-@define-color highlight  #44475a;
-@define-color foreground #f8f8f2;
-@define-color comment    #6272a4;
-@define-color cyan       #8be9fd;
-@define-color green      #50fa7b;
-@define-color orange     #ffb86c;
-@define-color pink       #ff79c6;
-@define-color purple     #bd93f9;
-@define-color red        #ff5555;
-@define-color yellow     #f1fa8c;
--------------------------------*/
-
-/* Tokyo Night Storm */
 @define-color background #000000;
-@define-color highlight  #414868;
+@define-color highlight  #00FF80;
 @define-color foreground #000000;
-@define-color comment    #565f89;
-@define-color cyan       #7dcfff;
-@define-color green      #00ff00;
-@define-color orange     #ff9e64;
-@define-color pink       #bb9af7;
-@define-color blue       #7aa2f7;
-@define-color red        #f7768e;
-@define-color yellow     #e0af68;
+@define-color comment    #999999;
+@define-color cyan       #00FF80;
+@define-color green      #00FF00;
+@define-color orange     #FFA500;
+@define-color pink       #FF00FF;
+@define-color blue       #80FF00;
+@define-color red        #FF0000;
+@define-color yellow     #FFFF00;
 
 * {
   border: none;
   border-radius: 0;
   font-family: "Hack";
- font-weight : 500;
+ font-weight : 700;
   font-size: 13px;
   min-height: 16px;
   transition: none;
@@ -44,8 +28,8 @@
   }
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
-  margin: 0 13px;
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio {
+  margin: 0 11px;
 }
 
 #battery {
@@ -64,16 +48,20 @@
   color: @orange;
 }
 
+#disk{
+  color:@green
+}
+
 #battery.critical {
   color: @pink;
 }
 
 #battery.warning:not(.charging), #battery.critical:not(.charging) {
   padding: 0 10px;
-  border-bottom: 3px solid @highlight; /* Same as window#waybar for consistency */
+  border-bottom: 3px solid @highlight; 
   background: @red;
   animation-name: blink;
-  animation-duration: 0.5s;
+  animation-duration: 0.1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -86,7 +74,6 @@
 #clock {
   color: @green;
 }
-
 #cpu {
   color: @green;
 }
@@ -110,26 +97,32 @@
 #temperature.critical {
   color: @red;
 }
-#workspaces button.visible {
-  background: @bg-dim;
-  color: @text-bright;
-}
 #workspaces button.focused {
   font-weight: bold;
-  color: @green;
-  text-shadow: 0px 0px 0 black;
+  color: @black;
+  background: @green
 }
 window#waybar {
   background: @background;
   color: @foreground;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
 }
 
 #workspaces button {
-  padding: 0 11px;
-  background: transparent;
-  color: @white;
-  border-top: 3px solid @background;
-  border-bottom: 3px solid transparent;
+  padding: 1 12px;
+  background: @black;
+  color: @green;
+  border-bottom: 2px solid transparent;
+}
+#language {
+  color: @green;
+  font-size: 14px;
+  padding: 1 10px;
+}
+#window {
+  color: @green;
+  font-size: 13px;
+  padding: 1 13px;
+  margin: 0 13px;
+  font-weight: 700; 
 }
