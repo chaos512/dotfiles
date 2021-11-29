@@ -79,6 +79,7 @@
     },
 
     "network": {
+        "interface": "wlan0",
         "interval": 5,
         "format-wifi": "  {essid} ({signalStrength}%) ( {bandwidthDownBits} | {bandwidthUpBits} )", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet

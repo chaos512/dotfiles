@@ -20,11 +20,13 @@ exec pipewire
 exec pipewire-media-session
 exec pipewire-pulse
 exec wireplumber
-
+exec bash -c "rfkill unblock wifi"
+exec bash -c "rfkill unblock bluetooth"
 set $lock_bg ~/.config/levitate.jpg
 bindsym $mod+Alt+l exec swaylock --hide-keyboard-layout -i $lock_bg
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
+output * bg ~/Downloads/main.png fill
 
 exec swayidle -w \
          timeout 5200 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg' \
