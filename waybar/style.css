@@ -9,7 +9,8 @@
 @define-color blue       #80FF00;
 @define-color red        #FF0000;
 @define-color yellow     #FFFF00;
-
+@define-color gray       #808080;
+@define-color black      #000000;
 * {
   border: none;
   border-radius: 0;
@@ -33,7 +34,7 @@
 }
 
 #battery {
-  color: @green;
+  color: @pink;
 }
 
 #battery.charging {
@@ -41,7 +42,7 @@
 }
 
 #battery.good {
-  color: @green;
+  color: @white;
 }
 
 #battery.warning {
@@ -49,11 +50,11 @@
 }
 
 #disk{
-  color:@green
+  color:@cyan
 }
 
 #battery.critical {
-  color: @pink;
+  color: @red;
 }
 
 #battery.warning:not(.charging), #battery.critical:not(.charging) {
@@ -68,11 +69,11 @@
 }
 
 #backlight {
-  color: @green;
+  color: @white;
 }
 
 #clock {
-  color: @green;
+  color: @white;
 }
 #cpu {
   color: @green;
@@ -83,11 +84,11 @@
 }
 
 #network {
-  color: @green;
+  color: @yellow;
 }
 
 #pulseaudio {
-  color: @green;
+  color: @orange;
 }
 
 #temperature {
@@ -109,18 +110,20 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 1 12px;
+  padding: 1 11px;
   background: @black;
   color: @green;
-  border-bottom: 2px solid transparent;
+  border: 2px solid; 
 }
 #language {
-  color: @green;
+  color: @gray;
   font-size: 14px;
   padding: 1 10px;
 }
 #window {
-  color: @green;
+  color: @white;
+  background: @black;
+  border: 2px solid;
   font-size: 13px;
   padding: 1 13px;
   margin: 0 13px;

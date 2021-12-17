@@ -58,7 +58,7 @@
 
 "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "<span foreground='#928374'></span> {:%a, %d %b  <span foreground='#928374'></span> %H:%M}"
+        "format": "{: %H:%M}"
     },
     "cpu": {
         "interval": 5,
@@ -101,22 +101,7 @@
         "all-outputs": true,
         "disable-scroll": false,
 	"current-only": false,
-        "format": "{name}$ {icon}",
-        "format-icons": {
-	     "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
-	     "6": "",
-	     "7": "",
-	     "8": "",
-	     "9": "",
-	     "10": "🎵",
-	     "urgent": "",
-             "focused": "",
-             "default": ""
-        }
+        "format": "{name}$",
     },
  
     "sway/language": {
