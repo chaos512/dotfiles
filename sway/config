@@ -17,15 +17,18 @@ seat * hide_cursor 2000
 
 ### Idle and exec configuration
 exec pipewire
-exec pipewire-media-session
 exec pipewire-pulse
 exec wireplumber
+exec lxpolkit
 exec bash -c "rfkill unblock wifi"
 exec bash -c "rfkill unblock bluetooth"
-set $lock_bg ~/.config/levitate.jpg
+exec bash -c "systemctl --user restart pipewire pipewire-pulse"
 bindsym $mod+Alt+l exec swaylock --hide-keyboard-layout -i $lock_bg
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
+set $opacity 0.9
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
 
 exec swayidle -w \
          timeout 5200 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg' \
@@ -131,7 +134,7 @@ bindsym XF86MonBrightnessDown exec sh -c "light -U 5"
     bindsym $mod+Shift+0 move container to workspace number 10
 
 # Gaps between containers
-gaps inner 2
+gaps inner 0
 gaps outer 0
 
 # Gaps between screen edges and containers

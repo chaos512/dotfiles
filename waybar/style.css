@@ -34,9 +34,8 @@
 }
 
 #battery {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #battery.charging {
@@ -52,9 +51,8 @@
 }
 
 #disk{
-  color:@black;
-  background: @green;
-  padding: 1 2px;
+  color:@green;
+  background: @black;
 }
 
 #battery.critical {
@@ -73,38 +71,32 @@
 }
 
 #backlight {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #clock {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 #cpu {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #memory {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #network {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #pulseaudio {
-  color: @black;
-  background: @green;
-  padding: 1 2px;
+  color: @green;
+  background: @black;
 }
 
 #temperature {
@@ -126,23 +118,22 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 1 11px;
+  padding: 1 6px;
   background: @black;
   color: @green;
   border: 2px solid; 
 }
 #language {
-  color: @black;
-  background: @green;
+  color: @green;
+  background: @black;
   font-size: 14px;
-  padding: 1 2px;
 }
 #window {
   color: @black;
   background: @green;
   border: 2px solid;
   font-size: 13px;
-  padding: 1 13px;
+  padding: 1 20px;
   margin: 0 13px;
   font-weight: 700; 
 }
