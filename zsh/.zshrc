@@ -4,7 +4,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 autoload -U colors && colors
-PS1="%B%{$fg[green]%}[%{$fg[green]%}%n%{$fg[magenta]%}Σ%{$fg[white]%}%M %{$fg[red]%}%~%{$fg[white]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[white]%}[%{$fg[green]%}%n%{$fg[white]%}Σ%{$fg[green]%}%M$fg[white]%}]%{$fg[green]%}{%{$fg[white]%}%~%{$fg[green]%}}%{$reset_color%}$%b "
 setopt autocd		# Automatically cd into typed directory.
 setopt interactive_comments
 
@@ -25,8 +25,6 @@ plugins=(
     fzf
     git
     colored-man-pages
-    zsh-autosuggestions
-    zsh-syntax-highlighting
     zsh-z
 )
 source $ZSH/oh-my-zsh.sh
