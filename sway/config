@@ -10,34 +10,48 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
-set $term kitty
+# Preferred apps
+set $term alacritty
+set $brows librewolf
+set $reader zathura
+set $yt freetube
+set $msc youtube-music
+set $editor neovim
 
+# Hide cursor
 seat * hide_cursor 2000
 
-### Idle and exec configuration
+# Startup exec configuration
 exec pipewire
 exec pipewire-pulse
 exec wireplumber
 exec lxpolkit
 exec bash -c "rfkill unblock wifi"
 exec bash -c "rfkill unblock bluetooth"
-exec bash -c "systemctl --user restart pipewire pipewire-pulse"
-bindsym $mod+Alt+l exec swaylock --hide-keyboard-layout -i $lock_bg
+
+# Binds to launch smth
+bindsym $mod+Alt+l exec swaylock --hide-keyboard-layout 
+bindsym $mod+Alt+b exec $brows 
+bindsym $mod+Alt+r exec $reader
+bindsym $mod+Alt+y exec $yt
+bindsym $mod+Alt+m exec $msc
+bindsym $mod+Alt+e exec $editor
+
+# Windows configuration
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
+# Idle configuration
 exec swayidle -w \
-         timeout 5200 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg' \
+         timeout 5200 'swaylock --hide-keyboard-layout -f -c 00FF00' \
          timeout  7000 'swaymsg "output * dpms off"' \
          resume 'swaymsg "output * dpms on"' \
-         after-resume 'swaymsg "output * enable"' \
-         before-sleep 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg'
+         before-sleep 'swaylock --hide-keyboard-layout -f -c 00FF00'
 
-### Input configuration
+# Input configuration
  
  Input type:touchpad {
        dwt enabled
